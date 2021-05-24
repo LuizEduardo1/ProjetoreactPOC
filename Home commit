@@ -1,1 +1,43 @@
+import React from 'react'
+import Grid from '@material-ui/core/Grid'
+import { Title, Subtitle, Button } from '../../common'
+import HomeBanner from '../../assets/images/HomeBanner.svg'
+import SimplifyLogo from '../../assets/images/SimplifyLogo.svg'
+
+function HomePage() {
+  return (
+    <Grid container direction="row" justify="center" alignItems="center">
+      <Grid item xs={12}>
+        <Title>
+          <img src={SimplifyLogo} alt="Logo" />
+        </Title>
+      </Grid>
+
+      <Grid container direction="row" justify="center" alignItems="center">
+        <Grid item xs={6}>
+          <Subtitle>
+            <b>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              tellus adipiscing tempor.
+            </b>
+          </Subtitle>
+
+          <Grid container direction="column" item xs={10}>
+            <p>
+              <Button primary>Comece agora mesmo!</Button>
+            </p>
+            <Grid container direction="column" item xs={5}>
+              <Button variant="outlined">Já tenho uma conta</Button>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={4.5}>
+          <img src={HomeBanner} alt="Banner" />
+        </Grid>
+      </Grid>
+    </Grid>
+  )
+}
+
+export default HomePage
 
